@@ -1,0 +1,15 @@
+NAME="nitrogen"
+VERSION=1.6.0
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="X11 background previewer and setter"
+DESCRIPTION="Nitrogen is a background browser and setter for X windows. It is
+written in C++ using the gtkmm toolkit. It can be used in two modes, browser
+and recall."
+HOMEPAGE="http://projects.l3ib.org/nitrogen/"
+SRC_URI="https://github.com/l3ib/nitrogen/archive/${VERSION}/nitrogen-${VERSION}.tar.gz"
+PATCH_URI="1.6.0-case-insensitivity.patch"
+
+# for glibmm
+CXXFLAGS="-std=c++11"
+CYGCONF_ARGS="--disable-inotify"

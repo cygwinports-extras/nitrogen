@@ -1,0 +1,33 @@
+--- origsrc/nitrogen-1.6.0/configure.ac	2016-11-13 20:03:29.000000000 -0600
++++ src/nitrogen-1.6.0/configure.ac	2016-12-08 16:54:31.043977100 -0600
+@@ -1,7 +1,7 @@
+ AC_PREREQ([2.69])
+ AC_INIT([nitrogen],[1.6.0],[daf@minuslab.net])
+ AC_CONFIG_SRCDIR([config.h.in])
+-AC_CONFIG_HEADER([config.h])
++AC_CONFIG_HEADER([_config.h:config.h.in])
+ AC_CONFIG_AUX_DIR([.])
+ AC_ISC_POSIX
+ AC_HEADER_STDC++
+--- origsrc/nitrogen-1.6.0/src/gcs-i18n.h	2016-11-13 20:03:29.000000000 -0600
++++ src/nitrogen-1.6.0/src/gcs-i18n.h	2016-12-08 16:55:14.318621600 -0600
+@@ -27,7 +27,7 @@
+ #define __GCS_I18N_H_
+ 
+ #ifdef HAVE_CONFIG_H
+-#include "config.h"
++#include "_config.h"
+ #endif /* HAVE_CONFIG_H */
+ 
+ #ifdef ENABLE_NLS
+--- origsrc/nitrogen-1.6.0/src/main.h	2016-11-13 20:03:29.000000000 -0600
++++ src/nitrogen-1.6.0/src/main.h	2016-12-08 16:55:19.417802800 -0600
+@@ -31,7 +31,7 @@ Foundation, Inc., 51 Franklin Street, Fi
+ #include <sys/stat.h>
+ 
+ #ifdef HAVE_CONFIG_H
+-#include "config.h"
++#include "_config.h"
+ #endif
+ 
+ typedef std::vector<std::string> VecStrs;
